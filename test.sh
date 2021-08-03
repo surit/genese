@@ -1,3 +1,3 @@
 #!/bin/bash
-ssh ubuntu@ec2-100-25-37-145.compute-1.amazonaws.com
+ssh ubuntu@ec2-52-91-131-160.compute-1.amazonaws.com
 mkdir test1
