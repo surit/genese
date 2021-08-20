@@ -8,7 +8,7 @@ pipeline {
         }
         stage('copy') {
             steps {
-                sh "cp test1 test11"
+                sh "cp -r test1 test11"
             }
         }
         stage('remove') {
