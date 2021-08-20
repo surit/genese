@@ -3,22 +3,22 @@ pipeline {
     stages {
         stage('create') {
             steps {
-               sh "mkdir test1"
+               sh "mkdir test11"
             }
         }
         stage('copy') {
             steps {
-                sh "cp -r test1 test11"
+                sh "cp -r test11 test111"
             }
         }
         stage('remove') {
             steps {
-                sh "rm test11"
+                sh "rm test111"
             }
         }
         stage('rename') {
             steps {
-                sh "mv test1 test2"
+                sh "mv test11 test2"
             }
         }
     }
