@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -8,23 +7,18 @@ pipeline {
                 sh 'pwd'
             }
         }
-    }
     
-    stages {
         stage('whoami') {
             steps {
                 sh 'whoami'
             }
         }
-    }
     
-    stages {
         stage('get pods') {
             steps {
                 sh 'kubectl get pods'
             }
         }
-    }
     
     stages {
         stage('scale') {
@@ -33,4 +27,5 @@ pipeline {
             }
         }
     }
+  }
 }
