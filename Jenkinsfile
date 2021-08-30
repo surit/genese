@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('get pods') {
             steps {
-                kubectl get pods
+                sh 'kubectl get pods'
             }
         }
         stage('scale') {
             steps {
-                kubectl get all
+                sh 'kubectl get all'
             }
         }
     }
