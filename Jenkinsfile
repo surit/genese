@@ -20,12 +20,11 @@ pipeline {
             }
         }
     
-    stages {
         stage('scale') {
             steps {
                 sh 'kubectl scale deployment metrics-server -n kube-system --replicas=2'
             }
         }
     }
-  }
-}
+ }
+
