@@ -9,7 +9,7 @@ pipeline {
         }
         stage('scale') {
             steps {
-                kubectl scale deployment metrics-server -n kube-system --replicas=2
+                Kubectl get all
             }
         }
     }
