@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('get pods') {
             steps {
-                echo 'Hello World'
+                kubectl get pods
+            }
+        }
+        stage('scale') {
+            steps {
+                kubectl scale deployment metrics-server -n kube-system --replicas=2
             }
         }
     }
