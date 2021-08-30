@@ -25,6 +25,12 @@ pipeline {
                 sh 'kubectl scale deployment metrics-server -n kube-system --replicas=2'
             }
         }
+        
+         stage('describe') {
+            steps {
+                sh 'kubectl describe deployment -n kube-system'
+            }
+        }
     }
  }
 
