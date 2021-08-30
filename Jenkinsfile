@@ -9,7 +9,7 @@ pipeline {
         }
         stage('scale') {
             steps {
-                Kubectl get all
+                kubectl get all
             }
         }
     }
