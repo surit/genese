@@ -1,33 +1,35 @@
 
 pipeline {
     agent any
-    
-     stages {
+
+    stages {
         stage('pwd') {
             steps {
                 sh 'pwd'
             }
         }
-        
-        }
-         
-      stages {
+    }
+    
+    stages {
         stage('whoami') {
             steps {
-                sh 'Whoami'
+                sh 'whoami'
             }
         }
-        }
-
+    }
+    
     stages {
         stage('get pods') {
             steps {
                 sh 'kubectl get pods'
             }
         }
+    }
+    
+    stages {
         stage('scale') {
             steps {
-                sh 'kubectl get all'
+                sh 'kubectl scale deployment metrics-server -n kube-system --replicas=2'
             }
         }
     }
